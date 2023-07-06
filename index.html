@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 이벤트</title>
+    <style>
+    #item{
+        position: relative;
+        width: 500px;
+        height: auto;
+        padding: 15px 20px;
+        margin: auto;
+    }
+    button{
+        background-color: aliceblue;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+    .over{
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+    }
+    #close{
+        position: absolute;
+        left: 30px;
+    }
+    .detail{
+        width: 400px;
+        text-align: left;
+        line-height: 1.8;
+        display: none;
+    }
+    #cover{
+        /* border: 5px solid transparent; */
+    }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="tMR2di-700x486.jpeg" alt="">
+        <button class="over" id="openT" onclick="showDetail()">상세 설명 보기</button>
+        <div id="desc" class="detail" >
+            <p><strong>《핀과 제이크의 어드벤처 타임》</strong><br><br> 줄여서 《어드벤처 타임》은 펜들턴 워드가 기획하고 카툰
+            네트워크에서 방영한 미국의 애니메이션이다. 
+            주인공인 인간 소년 ‘핀’과, 마법의 힘으로 몸의 크기와
+            모양을 자유자재로 변화시킬 수 있는 개 ‘제이크’의 모험을 다루고 있다. 
+            둘은 종말 이후의 세상인 ‘우 랜드’에서 산다. 이 시리즈의 파일럿은 닉툰스와 프레드레이터
+            스튜디오가 제작한 단편 애니메이션 소개 프로그램인
+            《랜덤! 카툰스》의 일부로 만들어졌다. 인터넷상에서 큰 화제를 모은 후 카툰 네트워크가 장편
+            시리즈로 만들어 2010년 3월 11일에 선공개가 이루어졌으며, 그해 4월 5일 첫 공식 방영을 시작했다.</p>
+        </div>
+        <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+    </div>
+
+    <script>
+        function showDetail() {
+            document.querySelector("#desc").style.display = "block";
+            document.querySelector("#open").style.display = "none";
+        }
+        function hideDetail() {
+            document.querySelector("#desc").style.display = "none";
+            document.querySelector("#open").style.display = "block";
+        }
+    </script>
+</body>
+</html>

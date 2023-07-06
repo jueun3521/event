@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyup이벤트</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        .box.active{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>keyup이벤트</h1>
+    <div class="box"></div>
+<p>키보드의 Enter 키를 눌러주세요</p>
+
+<script>
+    function handleKeyup(event){
+        var box = document.querySelector(".box");
+        box.classList.add("active")
+    }
+    window.addEventListener("keyup" , handleKeyup)
+</script>
+</body>
+</html>
