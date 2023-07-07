@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll event</title>
+    <style>
+        .contailner{
+            height: 2000px;
+        }
+        .iamge{
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .iamge.show{
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>scroll 이벤트</h1>
+    <p>스크롤 해보세요</p>
+    <div class="contailner">
+        <img src="tMR2di-700x486.jpeg" alt="" class="iamge">
+        
+    </div>
+    
+
+    <script>
+        function handleScroll() {
+            var iamge =  document.querySelector(".image");
+            var iamgePosion = image.getBoundingClientRect().top;
+            var windowHeight = window.innerHeight;
+            if(imagePosition < windowHeight) {
+                image.classList.add("show")
+            }
+        }
+        window.addEventListener("scroll", handleScroll);
+    </script>
+</body>
+</html>

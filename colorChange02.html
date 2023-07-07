@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색전환</title>
+    <style>
+        #change{
+            padding: 7px 25px;
+            background-color: #fff;
+            border: 1px solid #999;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .color_box{
+            width: 300px;
+            height: 200px;
+            background-color: black;
+            border-radius: 10px;
+        }
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <button id="change" onclick="changeBtn01()">Green</button>
+    <button id="change" onclick="changeBtn02()">Orange</button>
+    <button id="change" onclick="changeBtn03()">Purple</button>
+    <div class="color_box"></div>
+
+    <script>
+        function changeBtn01() {
+            var paragraph = document.querySelector(".color_box");
+            paragraph.style.backgroundColor = "green";
+        }
+        function changeBtn02() {
+            var paragraph = document.querySelector(".color_box");
+            paragraph.style.backgroundColor = "orange";
+        }
+        function changeBtn03() {
+            var paragraph = document.querySelector(".color_box");
+            paragraph.style.backgroundColor = "purple";
+        }
+
+    </script>
+</body>
+</html>

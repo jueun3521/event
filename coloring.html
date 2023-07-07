@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="coloring.css">
+    <title>색입히기</title>
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <p>Hear</p>
+    <button id="change" onclick="changeHear('green')">Green</button>
+    <button id="change" onclick="changeHear('red')">Red</button>
+    <button id="change" onclick="changeHear('yellow')">Yellow</button>
+
+    <p>Face</p>
+    <button id="change" onclick="changeface('green')">Green</button>
+    <button id="change" onclick="changeface('orange')">Orange</button>
+    <button id="change" onclick="changeface('purple')">Purple</button>
+
+    <p>Mouse</p>
+    <button id="change" onclick="changeMouse('green')">Green</button>
+    <button id="change" onclick="changeMouse('Red')">Red</button>
+    <button id="change" onclick="changeMouse('pink')">Pink</button>
+
+    <p>Arm</p>
+    <button id="change" onclick="changeArm('red')">Red</button>
+    <button id="change" onclick="changeArm('black')">Black</button>
+    <button id="change" onclick="changeArm('pink')">Pink</button>
+
+    <p>Body</p>
+    <button id="change" onclick="changeBody('green')">Green</button>
+    <button id="change" onclick="changeBody('Yellow')">Yellow</button>
+    <button id="change" onclick="changeBody('blue')">Blue</button>
+
+    <p>Legs</p>
+    <button id="change" onclick="changeLegs('red')">Red</button>
+    <button id="change" onclick="changeLegs('black')">Black</button>
+    <button id="change" onclick="changeLegs('pink')">Pink</button>
+
+    <p>Shoes</p>
+    <button id="change" onclick="changeFoot('red')">Red</button>
+    <button id="change" onclick="changeFoot('black')">Black</button>
+    <button id="change" onclick="changeFoot('pink')">Pink</button>
+
+
+
+
+    <div class="body_box">
+        <div class="hear01"></div>
+        <div class="hear02"></div>
+        <div class="hear03"></div>
+        <div class="face"></div>
+        <div class="brow01"></div>
+        <div class="brow02"></div>
+        <div class="eye01"></div>
+        <div class="eye02"></div>
+        <div class="mouse"></div>
+        <div class="body01"></div>
+        <div class="arm01"></div>
+        <div class="arm02"></div>
+        <div class="leg01"></div>
+        <div class="leg02"></div>
+        <div class="sho01"></div>
+        <div class="sho02"></div>
+    </div>
+
+    </div>
+    <script>
+        // 머리카락
+        function changeHear(color) {
+            var paragraph01 = document.querySelector(".hear01");
+            var paragraph02 = document.querySelector(".hear02");
+            var paragraph03 = document.querySelector(".hear03");
+            paragraph01.style.backgroundColor = color;
+            paragraph02.style.backgroundColor = color;
+            paragraph03.style.backgroundColor = color;
+        }
+        // 얼굴
+        function changeface(color) {
+            var paragraph = document.querySelector(".face");
+            paragraph.style.backgroundColor = color;
+        }
+        // 입
+        function changeMouse(color) {
+            var paragraph = document.querySelector(".mouse");
+            paragraph.style.backgroundColor = color;
+        }
+        // 몸
+        function changeBody(color) {
+            var paragraph = document.querySelector(".body01");
+            paragraph.style.backgroundColor = color;
+        }
+        // 팔
+        function changeArm(color) {
+            var paragraph01 = document.querySelector(".arm01");
+            var paragraph02 = document.querySelector(".arm02");
+            paragraph01.style.backgroundColor = color;
+            paragraph02.style.backgroundColor = color;
+        }
+        // 다리
+        function changeLegs(color) {
+            var paragraph01 = document.querySelector(".leg01");
+            var paragraph02 = document.querySelector(".leg02");
+            paragraph01.style.backgroundColor = color;
+            paragraph02.style.backgroundColor = color;
+        }
+        // 발
+        function changeFoot(color) {
+            var paragraph01 = document.querySelector(".sho01");
+            var paragraph02 = document.querySelector(".sho02");
+            paragraph01.style.backgroundColor = color;
+            paragraph02.style.backgroundColor = color;
+        }
+        
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자색바꾸기</title>
+    <style>
+        .text{
+            line-height: 30px
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="body" id="body">
+        <button id="change" onclick="btn_change()  ">글자색 바꾸기</button>
+        <div class="text" id="textP">
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptatibus vero quos molestiae perferendis odio ratione nihil atque dolores magni fugit sint alias beatae tenetur, 
+            dicta voluptate id, impedit, possimus repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt explicabo aperiam cum amet laborum repudiandae, quae aspernatur eaque tempora debitis ut temporibus vel veritatis fugit facere dolorum delectus at ab.
+        </div>
+    </div>
+
+    <script>
+        // 방법 1
+        // var color = ["white", "yellow" , "aqua" , "purple" , "orange"];
+        // var i = 0 // white = 0 
+        // function btn_change(){
+        //     i++;
+        //     if(i >= color.length){
+        //         i = 0;
+        //     }
+        //     var bodyTag = document.getElementById("textP");
+        //     bodyTag.style.color = color[i];
+        // }
+
+        // 방법2_스타일로 색을 바꾸는 방법
+        // function btn_change(){
+        //     var paragraph = document.querySelector(".text");
+        //     paragraph.style.color = "red";
+        // }
+
+        // 방법3_토글로 색상 변경
+        // function btn_change(){
+        //     var paragraph = document.querySelector(".text");
+        //     paragraph.classList.toggle("red")
+        // }
+
+        // 방법4_랜덤색 바꾸기
+        // function btn_change(){
+        //     var paragraph = document.querySelector(".text")
+        //     var colors = ["red", "blue", "yellow", "green", "purple", "orange"]
+        //     var randomIndex = Math.floor(Math.random() * colors.length)
+        //     var randomColor = colors[randomIndex];
+        //     paragraph.style.color = randomColor;
+        // 
+
+        // 방법5
+        // 1. 웹 요소를 변수로 지정 & 미리 만든 함수 사용
+        // var changeBtn = document.querySelector("#change")
+        // changeBtn.onclick = changeColor;
+        // function changeColor(){
+        //     document.querySelector(".text").style.color = "#f00"
+        // }
+
+        // 방법6
+        //  2. 웹 요소를 따로 변수를 만들지 않고 사용
+        // document.querySelector("#change").onclick = changeColor;
+        // function changeColor(){
+        //     document.querySelector(".text").style.color = "#f00"
+        // }
+
+        // 방법7
+        // 3.직접 함수를 선언
+        document.querySelector("#change").onclick = function(){
+            document.querySelector(".text").style.color = "#f00"
+        }
+    </script>
+</body>
+</html>
